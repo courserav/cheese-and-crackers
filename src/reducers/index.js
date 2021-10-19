@@ -1,7 +1,9 @@
 //Index file for reducers
-import boardCreator from './boardCreator'
-import { combineReducers } from "redux";
+import boardReducer from './board'
+import { combineReducers } from 'redux';
 
-const allReducers = combineReducers({
-    createBoard: boardCreator
+const allReducer = combineReducers({
+    board : boardReducer
 })
+
+export default allReducer
