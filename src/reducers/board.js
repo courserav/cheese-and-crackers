@@ -1,7 +1,11 @@
-const boardReducer = (state = 0, action) => {
+const boardReducer = (state = [], action) => {
     switch (action.type){
         case 'CREATE_BOARD':
-            return state + action.payload
+            let array = []
+            for (let i = 0; i < action.payload; i++){
+                array.push("Space")
+            }
+            return state.concat(array)
         default:
             return state
     }
